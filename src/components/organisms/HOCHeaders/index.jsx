@@ -6,21 +6,11 @@ import { Children } from "react";
 const Headers = ({ children }) => {
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <div className={styles["headerContainer"]}>
+        <div className={styles["headerElements"]}>Home</div>
+        <div className={styles["headerElements"]}>About</div>
+        <div className={styles["headerElements"]}>Contact</div>
+      </div>
       {children}
     </>
   );

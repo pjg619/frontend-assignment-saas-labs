@@ -1,22 +1,11 @@
-header {
+.headerContainer {
   background-color: #333;
   color: #fff;
   padding: 0 10px;
   border-bottom: 1px solid grey;
+  display: flex;
 }
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav li {
-  float: left;
-}
-
-nav li a {
+.headerElements {
   display: block;
   color: white;
   text-align: center;
@@ -24,7 +13,6 @@ nav li a {
   text-decoration: none;
   min-width: 70px;
 }
-
-nav li a:hover {
+.headerElements:hover {
   background-color: #222;
 }
