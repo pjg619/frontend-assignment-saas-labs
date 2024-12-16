@@ -17,14 +17,21 @@ const Table = ({ data = [] }) => {
 
   return (
     <div className={styles.containers}>
-      <div className={`${styles.table} ${styles.headers}`}>
+      <div
+        className={`${styles.table} ${styles.headers}`}
+        aria-label="Data table"
+      >
         <div className={styles["headersElement"]}>S.No.</div>
         <div className={styles["headersElement"]}>Percentage funded</div>
         <div className={styles["headersElement"]}>Amount pledged</div>
       </div>
 
       {currentData.map((item, index) => (
-        <div key={index} className={`${styles.table} ${styles.row}`}>
+        <div
+          key={index}
+          className={`${styles.table} ${styles.row}`}
+          aria-live="polite"
+        >
           <div className={styles["element"]}>{startIndex + index + 1}</div>
           <div className={styles["element"]}>{item["amt.pledged"]}</div>
           <div className={styles["element"]}>{item["percentage.funded"]}</div>
@@ -39,11 +46,6 @@ const Table = ({ data = [] }) => {
           rowsPerPage={rowsPerPage}
           setRowsPerPage={setRowsPerPage}
         />
-        {/* Implement pagination buttons or a library like react-pagination */}
-        {/* <button onClick={() => handlePageChange(currentPage - 1)}>
-          Previous
-        </button>
-        <button onClick={() => handlePageChange(currentPage + 1)}>Next</button> */}
       </div>
     </div>
   );
